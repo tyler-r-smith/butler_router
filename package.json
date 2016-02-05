@@ -1,0 +1,17 @@
+{
+  "name": "butler_router",
+  "version": "1.0.9",
+  "description": "A simple proxy router with a default page!",
+  "dependencies": {
+    "express": "^4.13.1",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "http-proxy": "^1.11.1",
+    "https": "^1.0.0"
+  },
+  "author": {
+    "name": "Tyler Smith",
+    "email": "t@q1s.co"
+  },
+  "license": "MIT"
+}
