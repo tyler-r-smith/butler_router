@@ -33,6 +33,8 @@ exports.httpsRoutes = {};
 
 exports.newRoute = function (host, port, path, protocall){
     path = (typeof(path) === "undefined") ? "/" : path;
+    if (path[0] !== "/")
+        path = "/"+path;
     switch (protocall) {
         case "http":
             if (typeof(exports.httpRoutes[host]) === 'undefined')
