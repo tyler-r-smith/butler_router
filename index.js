@@ -58,9 +58,10 @@ exports.router = function(req, res, routes, protocall){
     protocall = (typeof(protocall) === "string") ? protocall : "web"; 
     var hostname = req.headers.host.split(":")[0];
     var pathname = url.parse(req.url).pathname;
+    console.log(pathname);
     var end = true;
     var port = exports.defaultPagePort;
-    
+    console.log(routes[hostname]);
     if (typeof(routes[hostname]) !== "undefined") {
         if (typeof(routes[hostname][pathname]) !== "undefined")
             port = routes[hostname][pathname].port;
