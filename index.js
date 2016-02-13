@@ -72,7 +72,8 @@ exports.router = function(req, res, routes, protocall){
 exports.startHttp = function (port, name, filter){
     port = (typeof(port) === 'undefined') ? exports.httsPort : port;
     name = (typeof(name) === 'undefined') ? "http_server" : name;
-    exports._function[name] = filter;
+    if (typeof(filter) != "undefined")
+        exports._function[name] = filter;
     
     exports[name] = http.createServer(function(req, res) {
         exports._function[name]();
@@ -88,7 +89,8 @@ exports.startHttps = function (option, port, name, filter) {
     options = (typeof(options) === 'undefined') ? exports.httpsOptions : options;
     port = (typeof(port) === 'undefined') ? exports.httpsPort : port;
     name = (typeof(name) === 'undefined') ? "https_server" : name;
-    exports._function[name] = filter;
+    if (typeof(filter) != "undefined")
+        exports._function[name] = filter;
     console.log("https started on: "+port);
     if (options === false) {
         console.log("You must declare a key & cert to start the https server");

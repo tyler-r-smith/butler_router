@@ -1,8 +1,9 @@
 [BUTLER_ROUTER](http://q1s.co)
 
 How to install:
+in your app folder run
 ```bash
-$ npm install butler_router --save in your app folder
+$ npm install butler_router --save 
 ```
 
 The basics:
@@ -76,8 +77,13 @@ var httpsOptions2 = {
 var httpsServerName2 = "https_server2";
 br.startHttps(httpsOptions2, httpsPort2, httpsServerName2);
 ```
+##ISSUES
+[https://github.com/tyler-r-smith/butler_router] [issue]
+
 ## People
     [Tyler](https://q1s.co)
 
 ## License
   [MIT](LICENSE)
+  
+[issue]: = https://github.com/tyler-r-smith/butler_router
