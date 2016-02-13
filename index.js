@@ -23,7 +23,7 @@ exports.httpsPort = 443;
 exports.defaultPagePort = 12000;
 exports.localPath = "http://localhost"
 exports.httpsOptions = false;
-
+exports._function = {};
 
 //Variables that will be constructed.
 exports.httpRoutes = {};
@@ -61,11 +61,12 @@ exports.router = function(req, res, routes, protocall){
     var end = true;
     var port = exports.defaultPagePort;
     
-    if (typeof(routes[hostname]) !== "undefined")
+    if (typeof(routes[hostname]) !== "undefined") {
         if (typeof(routes[hostname][pathname]) !== "undefined")
             port = routes[hostname][pathname].port;
-        else 
+        else if (typeof(routes[hostname]["/"]) !== "undefined")
             port = routes[hostname]["/"].port;
+    }
     proxy[protocall](req, res, {target: exports.localPath + ":"+port});
 }
 
@@ -76,7 +77,8 @@ exports.startHttp = function (port, name, filter){
         exports._function[name] = filter;
     
     exports[name] = http.createServer(function(req, res) {
-        exports._function[name]();
+        if (typeof(exports._function[name]) === "function")
+            exports._function[name](req, res);
         exports.router(req, res, exports.httpRoutes)
     }).listen(port, function(){
         console.log("Http server started on port "+port);
@@ -97,7 +99,8 @@ exports.startHttps = function (option, port, name, filter) {
         return false;
     }
     exports[name] = https.createServer(options, function(req, res) {
-        exports._function[name]();
+        if (typeof(exports._function[name]) === "function")
+            exports._function[name]();  
         exports.router(req, res, exports.httpsRoutes);
     }).listen(port, function(){
         console.log("Https server started on port "+port);
