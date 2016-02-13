@@ -68,6 +68,7 @@ exports.router = function(req, res, routes, protocall){
         else if (typeof(routes[hostname]["/"]) !== "undefined")
             port = routes[hostname]["/"].port;
     }
+    console.log(port);
     proxy[protocall](req, res, {target: exports.localPath + ":"+port});
 }
 
