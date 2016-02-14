@@ -17,5 +17,6 @@
   "bugs": {
       "url": "https://github.com/tyler-r-smith/butler_router",
       "email": "t@q1s.co"
-  }
+  },
+  "keywords": ["router", "proxy", "port"]
 }

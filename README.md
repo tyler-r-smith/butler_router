@@ -1,4 +1,6 @@
-[BUTLER_ROUTER](http://q1s.co)
+#Butler Router
+
+[BUTLER_ROUTER](https://www.npmjs.com/package/butler_router)
 
 How to install:
 in your app folder run
@@ -78,12 +80,13 @@ var httpsServerName2 = "https_server2";
 br.startHttps(httpsOptions2, httpsPort2, httpsServerName2);
 ```
 ##ISSUES
-[https://github.com/tyler-r-smith/butler_router][issue]
+GitHub(https://github.com/tyler-r-smith/butler_router)
 
 ## People
-    [Tyler](https://q1s.co)
+[Tyler R Smith](https://q1s.co)
+[Mail](t@q1s.co)
 
 ## License
-  [MIT](LICENSE)
+[MIT](LICENSE)
   
 [issue]: = https://github.com/tyler-r-smith/butler_router
