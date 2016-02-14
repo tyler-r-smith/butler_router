@@ -81,7 +81,8 @@ exports.startHttp = function (port, name, filter){
     
     exports[name] = http.createServer(function(req, res) {
         if (typeof(exports._function[name]) === "function")
-            exports._function[name](req, res);
+            if(exports._function[name](req, res) === false)
+                return false;
         exports.router(req, res, exports.httpRoutes)
     }).listen(port, function(){
         console.log("Http server started on port "+port);
@@ -103,7 +104,8 @@ exports.startHttps = function (option, port, name, filter) {
     }
     exports[name] = https.createServer(options, function(req, res) {
         if (typeof(exports._function[name]) === "function")
-            exports._function[name]();  
+            if(exports._function[name](req, res) === false)
+                return false;
         exports.router(req, res, exports.httpsRoutes);
     }).listen(port, function(){
         console.log("Https server started on port "+port);

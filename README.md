@@ -78,7 +78,7 @@ var httpsServerName2 = "https_server2";
 br.startHttps(httpsOptions2, httpsPort2, httpsServerName2);
 ```
 ##ISSUES
-[https://github.com/tyler-r-smith/butler_router] [issue]
+[https://github.com/tyler-r-smith/butler_router][issue]
 
 ## People
     [Tyler](https://q1s.co)
