@@ -1,6 +1,6 @@
 {
   "name": "butler_router",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A simple proxy router with a default page!",
   "dependencies": {
     "express": "^4.13.1",
@@ -17,5 +17,6 @@
   "bugs": {
       "url": "https://github.com/tyler-r-smith/butler_router",
       "email": "t@q1s.co"
-  }
+  },
+  "keywords": ["router", "proxy", "port"]
 }
