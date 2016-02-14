@@ -88,5 +88,3 @@ GitHub(https://github.com/tyler-r-smith/butler_router)
 
 ## License
 [MIT](LICENSE)
-  
-[issue]: = https://github.com/tyler-r-smith/butler_router
