@@ -73,7 +73,7 @@ var name = "http_server2";
 var httpFilter = function(req, res) {
   //return false to stop the routing process
 }
-br.srartHttp(port, name)
+br.srartHttp(port, name, httpFilter)
 
 var httpsPort2 = 3443;
 var httpsOptions2 = {
