@@ -69,6 +69,9 @@ If duplicates are presents error will persist.
 ```js
 var port = 3080;
 var name = "http_server2";
+var httpFilter = function(req, res) {
+  //return false to stop the routing process
+}
 br.srartHttp(port, name)
 
 var httpsPort2 = 3443;
