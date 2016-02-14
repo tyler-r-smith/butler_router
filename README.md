@@ -83,8 +83,8 @@ br.startHttps(httpsOptions2, httpsPort2, httpsServerName2);
 GitHub(https://github.com/tyler-r-smith/butler_router)
 
 ## People
-[Tyler R Smith](https://q1s.co)
-[Mail](t@q1s.co)
+[Tyler R Smith](http://q1s.co)
+<t@q1s.co>
 
 ## License
 [MIT](LICENSE)
